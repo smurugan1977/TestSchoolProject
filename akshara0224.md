@@ -1,11 +1,11 @@
-**Page Layout (HTML)**
+## Page Layout (HTML)
 
-
+```python
 
 <div id="earnedBadges"></div>
 
 <div id="availableBadges"></div>
-
+```
 
 
 These are empty boxes on the webpage where badges will be shown.
@@ -20,12 +20,12 @@ These are empty boxes on the webpage where badges will be shown.
 
 
 
-**Getting Badge Data from Backend**
+## Getting Badge Data from Backend
 
 
-
+```python
 const response = await fetch(`${API\_URL}/check-progress`)
-
+```
 
 
 This asks the server:
@@ -193,4 +193,5 @@ window.addEventListener('DOMContentLoaded', loadBadges);
 
 
 This makes the page load badges automatically when the user opens the page.
+
 
