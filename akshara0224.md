@@ -40,11 +40,12 @@ The server sends back JSON data with badge info.
 
 
 
-**Showing Badge Progress**
+## Showing Badge Progress
 
 
-
+```python
 const percentage = Math.round((data.earned\_badges / data.total\_badges) \* 100);
+```
 
 
 
@@ -68,14 +69,14 @@ Then it displays:
 
 
 
-**Separating Earned vs Locked Badges**
+## Separating Earned vs Locked Badges
 
-
+```python
 
 const earnedBadges = badges.filter(b => b.earned);
 
 const lockedBadges = badges.filter(b => !b.earned);
-
+```
 
 
 This splits the badge list into two groups:
@@ -90,11 +91,12 @@ This splits the badge list into two groups:
 
 
 
-**Displaying Badges on Screen**
+## Displaying Badges on Screen
 
-
+```python
 
 earnedBadges.map(badge => createBadgeCard(badge, true))
+```
 
 
 
@@ -122,13 +124,13 @@ So every badge becomes a box with:
 
 
 
-**Creating a Badge Card (UI Box)**
+## Creating a Badge Card (UI Box)
 
-
+```python
 
 function createBadgeCard(badge, isEarned)
 
-
+```
 
 This function builds the badge display.
 
@@ -172,26 +174,26 @@ It also shows:
 
 
 
-**Error Message**
+## Error Message
 
 
-
+```python
 showError('Please log in to view your badges');
+```
 
 
 
 If something fails (not logged in, server error), it shows a red message.
 
 
+## Auto Load When Page Opens
 
-**Auto Load When Page Opens**
-
-
-
+```python
 window.addEventListener('DOMContentLoaded', loadBadges);
-
+```
 
 
 This makes the page load badges automatically when the user opens the page.
+
 
 
